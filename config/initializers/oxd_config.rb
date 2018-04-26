@@ -2,13 +2,14 @@
 Oxd.configure do |config|
   	config.oxd_host_ip                			= '127.0.0.1'
 	config.oxd_host_port      		  			= 8099
-	config.op_host					 			= "https://gluuserver.com"	
+	config.op_host					 			= "https://idp.centroxy.com"	
 	config.client_id 							= ""
 	config.client_secret 						= ""
 	config.op_discovery_path 					= ""
 	config.authorization_redirect_uri 			= "https://client.example.com/open_id/login"
 	config.post_logout_redirect_uri	  			= "https://client.example.com"
 	config.claims_redirect_uri	  				= ["https://client.example.com/uma/claims"]
+	config.overwrite_uma_resource 				= true
 	config.scope					  			= ["openid","profile", "email", "uma_protection","uma_authorization"]
 	config.grant_types							= ["authorization_code","client_credenitals","uma_ticket"]
 	config.application_type       	  			= "web"
